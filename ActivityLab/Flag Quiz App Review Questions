@@ -1,0 +1,53 @@
+FlagQuiz App Review:
+
+1. The Settings Menu:
+The menu is only visible in Portrait View - how is this controlled?
+		
+		this is set by setting the orientation to 'ORIENTATION_PORTRAIT'
+
+Where is the menu icon stored in Resources?
+		
+		the cog image is stored in the drawable folder in the 'res' section
+
+How do you display the Settings Menu either (i) on the App bar or (ii) within the options Menu?
+
+		on the app bar by touching the cog image
+
+How do you show only text for the menu?
+
+		change the item element to showAsAction
+
+
+
+
+2. Flag Shake Animation:
+There are 3 animations in one set.
+What is the difference between an android:toXDelta attribute value of "-5%p" and "-5%" ?
+What would the animation's behaviour be if the android:startOffset attribute was not set?
+		
+		the addition of the 'p' in moves the images by 5% of the parents width, where without the 'p' the image would move a 5% of the views width 
+
+		the start offset for each animation is needed because each animation of the flag takes 100 ms.
+		without the delayed start, each animation would cancel each other out and the flag would not move.
+
+
+View the Ryanair App. It has an animation that comes in from the bottom.
+What type of tweened animation is it and what attributes does it use?
+
+		fromYdelta
+
+
+
+
+3. Different Layouts - Portrait and Tablet Landscape:
+Phone: Portrait Orientation only - how is this set?
+		
+		this can be set in the android manifest
+		as screenOrientation="portrait"  andsetting it to always visable
+
+Tablet: Portrait and Landscape Orientations exhibit different behaviours.
+With reference to both using qualified names and the layout files explain both behaviours.
+
+		in portrait layout there is a button on the top to open the setings and start a new quiz, 
+		where in landscape view there is are two fragments, one for the main view of the flag quiz and one for the settings
+		
